@@ -3,7 +3,7 @@ import axios from "axios";
 export const getGameScores = async () => {
   try {
     return await axios.get(
-      "http://data.nba.net/10s/prod/v1/20180315/scoreboard.json"
+      "http://data.nba.net/10s/prod/v1/20190105/scoreboard.json"
     );
   } catch (e) {
     console.log(e);

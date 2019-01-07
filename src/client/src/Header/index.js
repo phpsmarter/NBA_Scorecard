@@ -1,4 +1,6 @@
-import React from "react";
+ import React from "react";
+
+ 
 
 const styles = {
   display: "flex",
@@ -20,17 +22,26 @@ const styles = {
 //   return `${mm}/${dd}/${yyyy}`;
 // };
 
-const Header = props => (
-  <div style={styles}>
+const Header = (props) =>{
+
+  //const today=moment().format("MMMM Do YYYY");
+
+  return(
+    <div style={styles}>
     <div style={{ fontFamily: "GillSans", fontSize: "20px" }}>
-      March 25th, 2018
+      {props.times}
     </div>
     <p
       style={{ fontFamily: "LucidaGrande", fontSize: "14px", marginTop: "6px" }}
     >
-      9 games today
+      Today's Game:{props.todayGameNum}
     </p>
   </div>
-);
+
+  )
+  
+};
+
+
 
 export default Header;
